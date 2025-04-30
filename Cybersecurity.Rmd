@@ -1,0 +1,39 @@
+---
+title: "Cybersecurity Incident Analysis"
+author: "Alicja Waskowski"
+output: html_document
+---
+
+## Introduction
+
+This R Markdown file presents an analysis of cybersecurity incidents using a sample dataset and custom R functions developed in the `Cybersecurity` package. The main tasks include filtering incidents by type, summarizing incident data, and visualizing attack trends over time.
+
+---
+
+## Load Libraries and Dataset
+
+We begin by loading the required packages and the sample dataset.
+
+```{r load-data, message=FALSE}
+# Load required packages
+library(Cybersecurity)
+library(ggplot2)
+
+# Load and inspect the data
+df <- read.csv("sample_incidents.csv")
+df$Date <- as.Date(df$Date, format = "%Y-%m-%d")
+
+head(df)
+# Filter for malware incidents
+filtered_df <- filter_by_type(df, "malware")
+
+# Display the filtered results
+filtered_df
+
+# Summarize the dataset
+summary_stats <- summarize_incidents(df)
+summary_stats
+
+# Plot attack trends
+plot_attack_trends(df)
+
