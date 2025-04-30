@@ -6,3 +6,4 @@ Cybersecurity is an R package designed for basic analysis of cybersecurity incid
 - Summarize incidents by date or category
 - Visualize attack trends using bar plots
 # Cybersecurity
+

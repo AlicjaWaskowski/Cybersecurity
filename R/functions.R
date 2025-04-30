@@ -7,7 +7,7 @@
 #' @return A filtered dataframe.
 #' @export
 filter_by_type <- function(df, type) {
-  subset(df, incident_type == type)
+  subset(df, Type == type)
 }
 
 #' Summarize Incident Data
@@ -30,10 +30,10 @@ summarize_incidents <- function(df) {
 #' @export
 plot_attack_trends <- function(df) {
   library(ggplot2)
-  df$date <- as.Date(df$date)
+  df$Date <- as.Date(df$Date)
   df$count <- 1
-  df_summary <- aggregate(count ~ date, data = df, FUN = sum)
-  ggplot(df_summary, aes(x = date, y = count)) +
+  df_summary <- aggregate(count ~ Date, data = df, FUN = sum)
+  ggplot(df_summary, aes(x = Date, y = count)) +
     geom_line() +
     labs(title = "Cyber Attack Trends Over Time", x = "Date", y = "Number of Attacks")
 }

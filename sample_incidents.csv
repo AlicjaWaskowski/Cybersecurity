@@ -1,0 +1,11 @@
+IncidentID,Type,Date,Organization,Impact
+1,malware,2024-01-10,OrgA,High
+2,phishing,2024-02-14,OrgB,Medium
+3,DDoS,2024-02-15,OrgC,Low
+4,malware,2024-03-01,OrgA,Medium
+5,ransomware,2024-03-12,OrgD,High
+6,phishing,2024-03-18,OrgE,Low
+7,insider,2024-04-05,OrgF,Medium
+8,DDoS,2024-04-10,OrgG,High
+9,ransomware,2024-04-12,OrgH,Low
+10,malware,2024-04-15,OrgI,Medium
